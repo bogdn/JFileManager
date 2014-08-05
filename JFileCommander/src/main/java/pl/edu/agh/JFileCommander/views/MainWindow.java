@@ -26,6 +26,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.TableCellRenderer;
 
 import pl.edu.agh.JFileCommander.controller.FileClickMouseAdapter;
+import pl.edu.agh.JFileCommander.controller.MkDirButtonListener;
 import pl.edu.agh.JFileCommander.controller.StartController;
 import pl.edu.agh.JFileCommander.model.MyTableModel;
 
@@ -36,6 +37,9 @@ public class MainWindow extends JFrame {
 	private JButton copyButton;
 	private JButton cutButton;
 	private JButton pasteButton;
+	private JButton deleteButton;
+	private JButton renameButton;
+	private JButton makeDirButton;
 	private JPanel commanderPanel;
 	
 	
@@ -52,7 +56,7 @@ public class MainWindow extends JFrame {
 		GridBagConstraints c = new GridBagConstraints();
 		c.gridx = 1;
 		c.gridy = 0;
-		c.gridwidth = 4;
+		c.gridwidth = 5;
 		
 		add(commanderPanel, BorderLayout.CENTER);
 		
@@ -76,7 +80,7 @@ public class MainWindow extends JFrame {
 		// buttons in commanderPanel
 		previousButton = new JButton("PREV");
 		c.gridwidth = 1; //reset to default
-		c.ipadx = 40;
+		c.ipadx = 30;
 		c.gridy = 1;
 		commanderPanel.add(previousButton, c);
 		
@@ -92,6 +96,18 @@ public class MainWindow extends JFrame {
 		pasteButton = new JButton("PASTE");
 		c.gridx =4;
 		commanderPanel.add(pasteButton, c);
+		
+		deleteButton = new JButton("DELETE");
+		c.gridx =5;
+		commanderPanel.add(deleteButton, c);
+		
+		renameButton = new JButton("RENAME");
+		c.gridx =6;
+		commanderPanel.add(renameButton, c);
+		
+		makeDirButton = new JButton("MKDIR");
+		c.gridx =7;
+		commanderPanel.add(makeDirButton, c);
 
 		pack();
 
@@ -110,6 +126,15 @@ public class MainWindow extends JFrame {
 	}
 	public void addPasteButtonListener(ActionListener al) {
 		pasteButton.addActionListener(al);
+	}
+	public void addCutButtonListener(ActionListener al) {
+		cutButton.addActionListener(al);
+	}
+	public void addDeleteButtonListener(ActionListener al) {
+		deleteButton.addActionListener(al);
+	}
+	public void addMkDirActionListener(ActionListener al) {
+		makeDirButton.addActionListener(al);
 	}
 	public static void main(String[] args) {
 		

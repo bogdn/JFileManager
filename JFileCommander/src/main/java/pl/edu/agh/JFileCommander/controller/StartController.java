@@ -21,5 +21,8 @@ public class StartController {
 		CopyButtonListener copy = new CopyButtonListener(mouseAdapter);
 		mainWindow.addCopyButtonListener(copy);
 		mainWindow.addPasteButtonListener(new PasteButtonListener(mainWindow, myTableModel, copy));
+		mainWindow.addCutButtonListener(copy);
+		mainWindow.addDeleteButtonListener(new DeleteButtonListener(mouseAdapter, mainWindow, myTableModel));
+		mainWindow.addMkDirActionListener(new MkDirButtonListener(mainWindow, myTableModel));
 	}
 }
