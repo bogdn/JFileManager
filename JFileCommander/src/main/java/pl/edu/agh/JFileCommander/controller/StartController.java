@@ -24,5 +24,6 @@ public class StartController {
 		mainWindow.addCutButtonListener(copy);
 		mainWindow.addDeleteButtonListener(new DeleteButtonListener(mouseAdapter, mainWindow, myTableModel));
 		mainWindow.addMkDirActionListener(new MkDirButtonListener(mainWindow, myTableModel));
+		mainWindow.addRenameButtonListener(new RenameButtonListener(mouseAdapter, mainWindow, myTableModel));
 	}
 }

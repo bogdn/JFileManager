@@ -22,6 +22,7 @@ public class PreviousButtonListener implements ActionListener {
 		System.out.println(previusPath);
 		view.setLeftTableModel(new MyTableModel(previusPath));
 		model.setPath(previusPath);
+		view.setCurrentPathLabel(model.getPath());
 
 	}
 

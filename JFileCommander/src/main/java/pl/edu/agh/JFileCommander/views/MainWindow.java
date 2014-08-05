@@ -41,6 +41,7 @@ public class MainWindow extends JFrame {
 	private JButton renameButton;
 	private JButton makeDirButton;
 	private JPanel commanderPanel;
+	private JLabel currentPathLabel;
 	
 	
 	
@@ -51,6 +52,9 @@ public class MainWindow extends JFrame {
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setPreferredSize(new Dimension(800, 600));
+		
+		currentPathLabel = new JLabel("/");
+		add(currentPathLabel, BorderLayout.NORTH);
 		
 		commanderPanel = new JPanel(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
@@ -135,6 +139,12 @@ public class MainWindow extends JFrame {
 	}
 	public void addMkDirActionListener(ActionListener al) {
 		makeDirButton.addActionListener(al);
+	}
+	public void addRenameButtonListener(ActionListener al) {
+		renameButton.addActionListener(al);
+	}
+	public void setCurrentPathLabel(String currentPath) {
+		currentPathLabel.setText(currentPath);
 	}
 	public static void main(String[] args) {
 		

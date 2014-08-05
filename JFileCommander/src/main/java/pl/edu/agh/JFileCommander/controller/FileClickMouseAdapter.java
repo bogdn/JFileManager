@@ -35,6 +35,7 @@ public class FileClickMouseAdapter extends MouseAdapter {
 
 			view.setLeftTableModel(new MyTableModel(fileFromTable.getAbsolutePath()));
 			model.setPath(fileFromTable.getAbsolutePath());
+			view.setCurrentPathLabel(model.getPath());
 		}
 
 	}
