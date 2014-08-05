@@ -1,4 +1,4 @@
-package fileVisitors;
+package pl.edu.agh.JFileCommander.fileVisitors;
 
 import java.io.IOException;
 import java.nio.file.FileVisitResult;

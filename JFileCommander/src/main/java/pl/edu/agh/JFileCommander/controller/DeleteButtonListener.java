@@ -7,9 +7,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+import pl.edu.agh.JFileCommander.fileVisitors.DeleteFileVisitor;
 import pl.edu.agh.JFileCommander.model.MyTableModel;
 import pl.edu.agh.JFileCommander.views.MainWindow;
-import fileVisitors.DeleteFileVisitor;
 
 public class DeleteButtonListener implements ActionListener {
 	private FileClickMouseAdapter mouseAdapter;

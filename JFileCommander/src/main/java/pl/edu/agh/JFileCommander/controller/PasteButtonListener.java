@@ -7,8 +7,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import fileVisitors.CopyFileVisitor;
-import fileVisitors.DeleteFileVisitor;
+import pl.edu.agh.JFileCommander.fileVisitors.CopyFileVisitor;
+import pl.edu.agh.JFileCommander.fileVisitors.DeleteFileVisitor;
 import pl.edu.agh.JFileCommander.model.MyTableModel;
 import pl.edu.agh.JFileCommander.views.MainWindow;
 
